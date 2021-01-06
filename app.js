@@ -68,3 +68,28 @@ function deletecheck(e){
         todo.classList.toggle('completed');
     }
 }
+function filterTodo(e) {
+    const todos = todoList.childNodes;
+    todos.forEach(function (todo) {
+        switch (e.target.value) {
+
+            case "All":
+                todo.style.display = 'flex';
+                break;
+            case "completed":
+                if (todo.classList.contains('completed')) {
+                    todo.style.display = 'flex';
+                } else {
+                    todo.style.display = 'none';
+                }
+            case "uncompleted":
+                if (!todo.classList.contains('completed')) {
+                    todo.style.display = 'flex';
+                } else {
+                    todo.style.display = 'none';
+                }
+        }
+    });
+
+
+}
