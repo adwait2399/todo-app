@@ -30,6 +30,7 @@ function addTodo(event) {
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo);
 
+   
     //check mark button
     const completedbutton = document.createElement('button');
     completedbutton.innerHTML = '<i class="fas fa-check"></i>';
@@ -98,3 +99,4 @@ function filterTodo(e) {
 
 
 }
+//project complete
